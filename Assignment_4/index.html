@@ -1,0 +1,2904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment_3</title>
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box
+}
+
+html {
+	font-family: sans-serif;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	height: 100%;
+}
+
+a {
+	background-color: transparent
+}
+
+.width-icon-dropdown-toggle:before {
+	content: "\e603"
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	display: inline-block
+}
+
+.w-inline-block {
+	max-width: 100%;
+	display: inline-block
+}
+
+.w-clearfix:before,
+.w-clearfix:after {
+	content: " ";
+	display: table;
+	grid-column-start: 1;
+	grid-row-start: 1;
+	grid-column-end: 2;
+	grid-row-end: 2
+}
+
+.w-clearfix:after {
+	clear: both
+}
+
+.w-button {
+	display: inline-block;
+	padding: 9px 15px;
+	background-color: #3898EC;
+	color: white;
+	border: 0;
+	line-height: inherit;
+	text-decoration: none;
+	cursor: pointer;
+	border-radius: 0
+}
+
+input.w-button {
+	-webkit-appearance: button
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	margin-bottom: 10px
+}
+
+h1 {
+	font-size: 38px;
+	line-height: 44px;
+	margin-top: 20px
+}
+
+h2 {
+	font-size: 32px;
+	line-height: 36px;
+	margin-top: 20px
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 30px;
+	margin-top: 20px
+}
+
+h4 {
+	font-size: 18px;
+	line-height: 24px;
+	margin-top: 10px
+}
+
+h5 {
+	font-size: 14px;
+	line-height: 20px;
+	margin-top: 10px
+}
+
+h6 {
+	font-size: 12px;
+	line-height: 18px;
+	margin-top: 10px
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 10px
+}
+
+ul,
+ol {
+	margin-top: 0;
+	margin-bottom: 10px;
+	padding-left: 40px
+}
+
+.w-list-unstyled {
+	padding-left: 0;
+	list-style: none
+}
+
+button,
+html input[type="button"],
+input[type="reset"] {
+	border: 0;
+	cursor: pointer;
+	-webkit-appearance: button
+}
+
+.w-form {
+	margin: 0 0 15px
+}
+
+.w-form-done {
+	display: none;
+	padding: 20px;
+	text-align: center;
+	background-color: #dddddd
+}
+
+.w-form-fail {
+	display: none;
+	margin-top: 10px;
+	padding: 10px;
+	background-color: #ffdede
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold
+}
+
+.w-input {
+	display: block;
+	width: 100%;
+	height: 38px;
+	padding: 8px 12px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333333;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+}
+
+.w-input:-moz-placeholder {
+	color: #999
+}
+
+.w-input::-moz-placeholder {
+	color: #999;
+	opacity: 1
+}
+
+.w-input:-ms-input-placeholder {
+	color: #999
+}
+
+.w-input::-webkit-input-placeholder {
+	color: #999
+}
+
+.w-input:focus {
+	border-color: #3898EC;
+	outline: 0
+}
+
+textarea.w-input {
+	height: auto
+}
+
+.w-container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 940px
+}
+
+.w-container:before,
+.w-container:after {
+	content: " ";
+	display: table;
+	grid-column-start: 1;
+	grid-row-start: 1;
+	grid-column-end: 2;
+	grid-row-end: 2
+}
+
+.w-container:after {
+	clear: both
+}
+
+.w-container .w-row {
+	margin-left: -10px;
+	margin-right: -10px
+}
+
+.w-row:before,
+.w-row:after {
+	content: " ";
+	display: table;
+	grid-column-start: 1;
+	grid-row-start: 1;
+	grid-column-end: 2;
+	grid-row-end: 2
+}
+
+.w-row:after {
+	clear: both
+}
+
+.w-row .w-row {
+	margin-left: 0;
+	margin-right: 0
+}
+
+.w-col {
+	position: relative;
+	float: left;
+	width: 100%;
+	min-height: 1px;
+	padding-left: 10px;
+	padding-right: 10px
+}
+
+.w-col .w-col {
+	padding-left: 0;
+	padding-right: 0
+}
+
+.width-col-1 {
+	width: 8.33333333%
+}
+
+.width-col-2 {
+	width: 16.66666667%
+}
+
+.width-col-3 {
+	width: 25%
+}
+
+.width-col-4 {
+	width: 33.33333333%
+}
+
+.width-col-5 {
+	width: 41.66666667%
+}
+
+.width-col-6 {
+	width: 50%
+}
+
+.width-col-7 {
+	width: 58.33333333%
+}
+
+.width-col-8 {
+	width: 66.66666667%
+}
+
+.width-col-9 {
+	width: 75%
+}
+
+.width-col-10 {
+	width: 83.33333333%
+}
+
+.width-col-11 {
+	width: 91.66666667%
+}
+
+.width-col-12 {
+	width: 100%
+}
+
+.w-hidden-main {
+	display: none !important
+}
+
+
+.dr_op_down_item {
+	display: inline-block;
+	position: relative;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 900
+}
+
+.dr_op_down_toggle,
+.dr_op_down_item-link {
+	position: relative;
+	vertical-align: top;
+	text-decoration: none;
+	color: #222222;
+	padding: 20px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	white-space: nowrap
+}
+
+.dr_op_down_toggle {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	display: inline-block;
+	cursor: pointer;
+	padding-right: 40px
+}
+
+.width-icon-dropdown-toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	margin-right: 20px;
+	width: 1em;
+	height: 1em
+}
+
+.dr_op_down_item-list {
+	position: absolute;
+	background: #dddddd;
+	display: none;
+	min-width: 100%
+}
+
+.dr_op_down_item-list.w--open {
+	display: block
+}
+
+.dr_op_down_item-link {
+	padding: 10px 20px;
+	display: block;
+	color: #222222
+}
+
+.dr_op_down_item-link.menu_current {
+	color: #0082f3
+}
+
+.w-nav {
+	position: relative;
+	background: #dddddd;
+	z-index: 1000
+}
+
+.w-nav:before,
+.w-nav:after {
+	content: " ";
+	display: table;
+	grid-column-start: 1;
+	grid-row-start: 1;
+	grid-column-end: 2;
+	grid-row-end: 2
+}
+
+.w-nav:after {
+	clear: both
+}
+
+.logo {
+	position: relative;
+	float: left;
+	text-decoration: none;
+	color: #333333
+}
+
+.w-nav-link {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: #222222;
+	padding: 20px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.w-nav-link.menu_current {
+	color: #0082f3
+}
+
+.nav_menu {
+	position: relative;
+	float: right
+}
+
+
+.w-nav-button.w--open {
+	background-color: #C8C8C8;
+	color: white
+}
+
+.w--nav-dropdown-open {
+	display: block
+}
+
+.w--nav-dropdown-toggle-open {
+	display: block
+}
+
+.w--nav-dropdown-list-open {
+	position: static
+}
+
+body {
+	margin-top: 2%;
+	margin-right: 2%;
+	margin-left: 2%;
+	font-family: 'Dosis', sans-serif;
+	color: #121213;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+h1 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 38px;
+	line-height: 44px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+h2 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 32px;
+	line-height: 36px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	font-size: 24px;
+	line-height: 30px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+h4 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+h5 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 600;
+	letter-spacing: 0px;
+	text-transform: uppercase;
+}
+
+h6 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+p {
+	margin-bottom: 10px;
+	font-family: Dosis, sans-serif;
+	color: #919197;
+	font-size: 17px;
+	line-height: 25px;
+}
+
+blockquote {
+	display: flex;
+	width: 70%;
+	min-height: 150px;
+	margin-bottom: 10px;
+	padding: 10px 37px;
+
+
+	align-items: center;
+	border-left: 1px none #000;
+	background-image: linear-gradient(284deg, #ff6361, #e47312);
+	color: #fff;
+	font-size: 26px;
+	line-height: 32px;
+	font-weight: 300;
+}
+
+figure {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.banner {
+	position: relative;
+	display: flex;
+	height: 85vh;
+	padding-right: 5%;
+	padding-left: 5%;
+	-webkit-box-orient: horizontal;
+
+
+	flex-direction: row;
+
+
+	justify-content: center;
+
+
+	align-items: center;
+	background-color: #c1c3cc;
+	background-image: linear-gradient(76deg, rgba(193, 195, 204, 0.83) 35%, rgba(193, 195, 204, 0.28) 65%), url("https://nuuk-e3eaa.firebaseapp.com/assets/img/slide-2.jpg");
+	background-position: 0px 0px, 50% 0%;
+	background-size: auto, cover;
+	background-attachment: scroll, fixed;
+}
+
+.section {
+	padding: 10% 5%;
+}
+
+.section.gray {
+	background-color: #f7f8fc;
+}
+
+.section.gray.small {
+	padding: 8% 0% 20px 20px;
+}
+
+.section.add-5-percent {
+	padding-top: 15%;
+	padding-bottom: 5%;
+}
+
+.section.color {
+	padding-top: 7%;
+	padding-bottom: 7%;
+	background-color: #e47312;
+	background-image: linear-gradient(72deg, #e47312, rgba(255, 99, 97, 0.78)), url("https://nuuk-e3eaa.firebaseapp.com/assets/img/banner-2.jpg");
+	background-position: 0px 0px, 50% 50%;
+	background-size: auto, cover;
+	background-repeat: repeat, no-repeat;
+	background-attachment: scroll, fixed;
+}
+
+.section.logo {
+	padding-top: 3%;
+	padding-bottom: 3%;
+	background-image: linear-gradient(56deg, #e47312, #ff6361);
+	width: 100%;
+	float: left;
+	display: table;
+}
+
+.section.for-project {
+	margin-right: -20px;
+	padding: 0px 0px 20px;
+	background-color: #fff;
+}
+
+.section._0-top {
+	padding-top: 0%;
+}
+
+.section.for-changelog {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.container {
+	max-width: 1200px;
+
+
+	flex: 1;
+}
+
+.container._2-down {
+	margin-top: 100px;
+}
+
+.navigation_bar {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: auto;
+	display: flex;
+	width: 90%;
+	margin-top: 2%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 0%;
+	padding-left: 0%;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+
+
+	align-items: center;
+	background-color: #fff;
+}
+
+.brand {
+	position: absolute;
+	display: flex;
+	height: 110px;
+	padding-right: 35px;
+	padding-left: 35px;
+
+
+	justify-content: center;
+
+
+	align-items: center;
+
+
+	align-self: stretch;
+	-webkit-box-ordinal-group: 0;
+
+
+	order: -1;
+	background-color: #e47312;
+}
+
+.brand.normal {
+	position: relative;
+}
+
+.nav-menu {
+	display: flex;
+
+
+	align-items: center;
+
+
+	align-self: stretch;
+	-webkit-box-ordinal-group: 2;
+
+
+	order: 1;
+}
+
+.nav-link {
+	position: relative;
+	display: inline-block;
+	padding: 31px 14px;
+
+
+	justify-content: center;
+
+
+	align-items: center;
+	color: #414147;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: .2s;
+}
+
+.nav-link.menu_current {
+	color: #e47312;
+}
+
+.nav-link:hover {
+	color: #e47312;
+}
+
+.nav-link.drop {
+
+
+	display: flex;
+}
+
+.nav-link::before {
+	content: '';
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	width: 1px;
+	height: 0;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #e47312;
+	transition: .2s;
+}
+
+.nav-link::after {
+	content: '';
+	position: absolute;
+	left: 0%;
+	right: 0%;
+	bottom: 0%;
+	width: 1px;
+	height: 0;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #e47312;
+	transition: .2s;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+	height: 30px;
+}
+
+.navtext {
+	position: relative;
+	z-index: 1;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	background-color: #fff;
+}
+
+.icon {
+	display: none;
+}
+
+.arrow_image_down {
+	position: relative;
+	z-index: 1;
+	width: 6px;
+	margin-left: 7px;
+}
+
+.dropdown-list {
+	background-color: #fff;
+}
+
+.dropdown-list.w--open {
+	min-width: 150px;
+	padding: 9px 13px;
+}
+
+.dropdown-link {
+	color: #717177;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.dropdown-link:hover {
+	background-color: #f1f1f7;
+	color: #e47312;
+}
+
+#dropdown-item:hover .dr_op_down_item-list {
+	display: block;
+	min-width: 150px;
+	padding: 9px 13px;
+}
+
+.info-wrapper {
+	height: 100%;
+	margin-left: 20px;
+	padding: 34px 28px 31px;
+	background-color: #e47312;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.info-wrapper:hover {
+	background-color: #e98a38;
+}
+
+.info-wrapper.for-x {
+	position: absolute;
+	left: auto;
+	top: 0%;
+	right: 0%;
+	bottom: auto;
+	height: 75px;
+	padding-top: 30px;
+}
+
+.line-2 {
+	position: relative;
+	top: 6px;
+	width: 20px;
+	height: 2px;
+	background-color: #fff;
+}
+
+.line-2.x1 {
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.line-2.x2 {
+	margin-top: -2px;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.info-big-wrapper {
+	position: fixed;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	z-index: 9999;
+	display: none;
+}
+
+.info-big-overlay {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.info-left-wrapper {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 500px;
+	z-index: 10000;
+	padding: 95px 50px 35px 70px;
+	background-color: #fff;
+	transform: translateX(100%);
+	transition: all .2s ease-out;
+}
+
+.top-margin {
+	margin-top: 50px;
+}
+
+.top-margin.half {
+	margin-top: 25px;
+}
+
+.top-margin.half.flex {
+
+
+	display: flex;
+	margin-top: 30px;
+}
+
+.top-title-wrapper {
+	position: relative;
+	display: flex;
+	margin-bottom: 7%;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+
+
+	align-items: center;
+}
+
+.top-title-wrapper.center {
+
+
+	justify-content: center;
+}
+
+.top-title-wrapper.center.vertical {
+	margin-bottom: 0%;
+
+
+	flex-direction: column;
+}
+
+.top-title-wrapper.more {
+	margin-bottom: 15%;
+}
+
+.features_web_wrapper {
+	position: absolute;
+	left: auto;
+	top: auto;
+	right: -2.5%;
+	bottom: -83px;
+	display: flex;
+	width: 1000px;
+	padding: 15px 100px 5px 50px;
+	background-color: #e47312;
+	background-image: linear-gradient(186deg, #e47312, #ff6361);
+}
+
+.infos-flex {
+	z-index: 1;
+	display: flex;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+
+	align-items: flex-start;
+}
+
+.in_fo_child {
+	display: flex;
+	padding-top: 10px;
+
+
+	flex-direction: column;
+
+
+	justify-content: center;
+
+
+	align-items: center;
+
+
+	flex: 1;
+}
+
+.in_fo_child.horizontal {
+	margin-bottom: 15px;
+	padding-top: 0px;
+	-webkit-box-orient: horizontal;
+
+
+	flex-direction: row;
+
+
+	justify-content: flex-start;
+
+
+	align-items: flex-start;
+}
+
+.info_image {
+	width: 24px;
+	margin-bottom: 15px;
+}
+
+.info_image.left {
+	width: 20px;
+	margin-right: 15px;
+	margin-bottom: 0px;
+}
+
+.phone-text {
+	margin-top: 0px;
+	margin-bottom: 10px;
+	color: #fff;
+	font-size: 13px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.paragraph-white {
+	margin-bottom: 5px;
+	color: hsla(0, 0%, 100%, 0.7);
+}
+
+.paragraph-white.bigger {
+	margin-top: 10px;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: 300;
+}
+
+.paragraph-white.bigger.normal {
+	font-weight: 400;
+}
+
+.paragraph-white._100 {
+	color: #fff;
+}
+
+.top-title {
+	position: relative;
+	z-index: 2;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 42px;
+	line-height: 50px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.top-title.absolute {
+	position: absolute;
+	left: -53px;
+	top: -26px;
+	z-index: 1;
+	color: rgba(241, 241, 247, 0.4);
+	font-size: 120px;
+	letter-spacing: 11px;
+}
+
+.top-title.absolute._75-percent {
+	color: rgba(241, 241, 247, 0.75);
+}
+
+.top-title.absolute.in-form {
+	left: -17px;
+	font-size: 100px;
+}
+
+.top-title.absolute.also-center {
+	left: 50%;
+	-webkit-transform: translate(-50%, 0px);
+	-ms-transform: translate(-50%, 0px);
+	transform: translate(-50%, 0px);
+}
+
+.top-title.white {
+	color: #fff;
+}
+
+.top-title.white.big {
+	color: #e47312;
+	font-size: 50px;
+	line-height: 60px;
+}
+
+.top-title.smaller-white {
+	margin-right: 60px;
+	-webkit-box-ordinal-group: 0;
+
+
+	order: -1;
+	-webkit-box-flex: 0;
+
+
+	flex: 0 0 auto;
+	color: #fff;
+	font-size: 15px;
+	line-height: 20px;
+}
+
+.top-title.smaller-white.in-footer {
+	margin-bottom: 30px;
+	padding-right: 14px;
+	background-color: #0a1229;
+}
+
+.top-title.smaller-white.blog {
+	margin-right: 0px;
+	margin-bottom: 15px;
+	font-size: 19px;
+	line-height: 26px;
+}
+
+.top-title.smaller-white.no-width {
+	display: none;
+	margin-right: 0px;
+}
+
+.top-title._30px {
+	font-size: 30px;
+	line-height: 40px;
+}
+
+.top-title.small-version {
+	margin-bottom: 20px;
+	font-size: 20px;
+	line-height: 30px;
+}
+
+.top-title.on-banner {
+	color: #fff;
+	font-size: 62px;
+	line-height: 70px;
+}
+
+.features-icon {
+	margin-bottom: 20px;
+}
+
+.service-title {
+	margin-top: 0px;
+	font-size: 17px;
+	line-height: 30px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.service-title.team {
+	line-height: 20px;
+}
+
+.service-content {
+	margin-bottom: 5%;
+	padding-right: 5%;
+}
+
+.margin-page {
+	margin-top: 15%;
+}
+
+.margin-page._10-percent {
+	margin-top: 10%;
+}
+
+.text-block {
+	line-height: 16px;
+}
+
+.navlink.for-button.blue.w-inline-block {
+	position: relative;
+}
+
+.navlink.for-button.blue.w-inline-block::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	background-color: hsla(0, 0%, 100%, 0.3);
+	transition: .2s;
+}
+
+.navlink.for-button.blue.w-inline-block:hover::after {
+	background-color: #e47312;
+}
+
+.navlink {
+	overflow: hidden;
+	margin-left: 25px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: #121217;
+	font-size: 14px;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.navlink.for-button {
+	margin-top: 15px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 5px;
+	color: #fff;
+}
+
+.navlink.for-button.blue {
+	color: #919198;
+	font-size: 13px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.navlink.for-button.blue._0 {
+	margin-top: 0px;
+}
+
+.navlink.for-button.blue.white {
+	color: #fff;
+}
+
+.navlink.for-button.blue.white.for-footer {
+	margin-top: 0px;
+	margin-bottom: 5px;
+	font-size: 13px;
+}
+
+.navlink.for-button.blue.white.for-footer.in-sidebar {
+	margin-bottom: 0px;
+	margin-left: 18px;
+	color: #414147;
+}
+
+.navlink.for-button {
+	position: relative;
+}
+
+.navlink.for-button::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	z-index: 100;
+	background-color: hsla(0, 0%, 100%, 0.3);
+	transition: .2s;
+}
+
+.navlink.for-button:hover::after {
+	background-color: white;
+}
+
+.navlink.for-button.blue.white.for-footer.w-inline-block {
+	position: relative;
+}
+
+.navlink.for-button.blue.white.for-footer.w-inline-block::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	background-color: transparent;
+	transition: .2s;
+}
+
+.navlink.for-button.blue.white.for-footer.w-inline-block:hover::after {
+	background-color: white;
+}
+
+.navlink.for-button.blue.white.w-inline-block:hover::after {
+	background-color: white;
+}
+
+.navlink.for-button.blue.white.w-inline-block {
+	position: relative;
+}
+
+.navlink.for-button.blue.white.w-inline-block::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	background-color: transparent;
+	transition: .2s;
+}
+
+.navlink.for-button.blue.white.w-inline-block:hover::after {
+	background-color: white;
+}
+
+.navlink.for-button.blue.white.not-link {
+	display: inline-block;
+}
+
+.padding-right {
+	padding-left: 100px;
+}
+
+.padding-right.left {
+	padding-right: 100px;
+	padding-left: 0px;
+}
+
+.row-flex {
+	display: flex;
+
+
+	align-items: center;
+}
+
+.fun-facts {
+	padding-right: 40%;
+}
+
+.fun-text {
+	margin-bottom: 10px;
+	color: #e47312;
+	font-size: 60px;
+	line-height: 70px;
+	font-weight: 500;
+}
+
+.social-vertical {
+	position: absolute;
+	left: auto;
+	top: auto;
+	right: 0%;
+	bottom: 143px;
+	display: flex;
+	padding: 10px;
+
+
+	flex-direction: column;
+	background-color: #0a1229;
+}
+
+.social-vertical.horizontal {
+	position: absolute;
+	left: auto;
+	top: auto;
+	right: 0%;
+	bottom: 0%;
+
+
+	flex-direction: column;
+	background-color: #e47312;
+}
+
+.social-icon {
+	display: flex;
+	width: 40px;
+	height: 50px;
+	float: left;
+
+
+	justify-content: center;
+
+
+	align-items: center;
+	border-bottom: 1px solid hsla(0, 0%, 100%, 0.14);
+}
+
+.social-icon.no-bottom {
+	border-bottom-style: none;
+}
+
+.over_flow_hidden {
+	overflow: hidden;
+}
+
+.team-wrapper {
+	position: relative;
+	width: 95%;
+}
+
+.team-photo {
+	min-height: 300px;
+	background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/team-1.jpg");
+	background-position: 50% 0%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.team-photo._2 {
+	background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/team-2.jpg");
+}
+
+.team-photo._3 {
+	background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/team-3.jpg");
+}
+
+.team-photo._4 {
+	background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/team-4.jpg");
+}
+
+.team-content {
+	padding: 29px 66px 29px 29px;
+	background-color: #fff;
+}
+
+.job-title {
+	margin-bottom: 0px;
+	color: #bdbdc9;
+	font-size: 16px;
+}
+
+.testi-title {
+	margin-top: 15px;
+	margin-bottom: 5px;
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.testimonials-photo {
+	position: relative;
+	display: flex;
+	width: 60px;
+	height: 60px;
+	margin: -115px auto 25px;
+
+
+	justify-content: center;
+	-webkit-box-align: stretch;
+	-webkit-align-items: stretch;
+	-ms-flex-align: stretch;
+	align-items: stretch;
+	border-radius: 100%;
+	background-image: linear-gradient(8deg, #ff6361, #e47312);
+	opacity: 1;
+	color: #fff;
+	font-size: 80px;
+	line-height: 80px;
+}
+
+.testimonials-wrapper {
+	position: relative;
+	display: block;
+	width: 90%;
+	margin: 50px auto 61px;
+	padding: 80px 30px 26px;
+	background-color: #fff;
+	text-align: center;
+}
+
+.testimonials-wrapper.no-margin {
+	margin-bottom: 0px;
+}
+
+.testimonials-wrapper.move-down {
+	margin-top: 151px;
+}
+
+.testimonial-paragraph {
+	margin-top: 15px;
+	margin-bottom: 0px;
+	color: #919197;
+}
+
+.text-block-2 {
+	padding-top: 12px;
+}
+
+.footer {
+	position: relative;
+	z-index: 1;
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 70px;
+	padding-right: 50px;
+	padding-left: 50px;
+	border-top: 1px solid #2f3038;
+	background-color: #0a1229;
+	display: flex;
+}
+
+.tab-logo {
+	width: 20%;
+	min-height: 100px;
+	background-color: transparent;
+	background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-5w.png");
+	background-position: 50% 50%;
+	background-size: 100px;
+	background-repeat: no-repeat;
+	-webkit-transition: all 400ms ease;
+	transition: all 400ms ease;
+	text-align: center;
+}
+
+.tab-logo:hover {
+	opacity: 1;
+}
+
+.tab-logo.menu_current {
+	background-color: transparent;
+	opacity: 1;
+}
+
+.tab-logo.logo-2 {
+	background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-2w.png");
+	background-size: 100px;
+}
+
+.tab-logo.logo-2.menu_current {
+	background-color: transparent;
+}
+
+.tab-logo.logo-3 {
+	background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-3w.png");
+	background-size: 100px;
+}
+
+.tab-logo.logo-4 {
+	background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-4w.png");
+	background-size: 100px;
+}
+
+.tab-logo.logo-5 {
+	background-image: url("https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-1w.png");
+	background-size: 100px;
+}
+
+.logo-flex {
+	display: flex;
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+
+
+	align-items: center;
+}
+
+.collection-item {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.project-wrapper {
+	padding-top: 20px;
+	padding-right: 20px;
+	float: left;
+}
+
+.project-content {
+	position: relative;
+	overflow: hidden;
+}
+
+.project-overlay {
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	right: 0%;
+	bottom: 0%;
+	display: flex;
+
+
+	justify-content: center;
+
+
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	transition: .2s;
+	opacity: 0;
+}
+
+.project-circle {
+	display: flex;
+	width: 90px;
+	height: 90px;
+	padding-right: 11px;
+	padding-left: 11px;
+
+
+	justify-content: center;
+
+
+	align-items: center;
+	border-radius: 100%;
+	background-image: linear-gradient(59deg, #ff6361, #e47312);
+	color: #fff;
+	font-size: 12px;
+	line-height: 18px;
+	font-weight: 500;
+	text-align: center;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.collection-item:hover .project-overlay,
+.collection-item:hover .project-circle {
+	opacity: 1;
+}
+
+.Assignment_4 {
+	position: relative;
+}
+
+.footer-column {
+	padding-right: 20%;
+}
+
+.with-line {
+	position: relative;
+	display: flex;
+
+
+	justify-content: flex-start;
+
+
+	align-items: center;
+}
+
+.line {
+	position: absolute;
+	left: 0%;
+	top: 8px;
+	right: auto;
+	bottom: auto;
+	width: 100%;
+	height: 1px;
+	background-color: #ff6361;
+}
+
+.copy_right_section {
+	margin-top: 80px;
+}
+
+.left-copyright-flex {
+	display: flex;
+
+
+	justify-content: flex-start;
+
+
+	align-items: center;
+}
+
+.left-copyright-flex.right {
+	-webkit-box-pack: end;
+	-webkit-justify-content: flex-end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
+
+.copyright {
+	margin-bottom: 0px;
+	color: #b7b7c7;
+	font-size: 14px;
+}
+
+.link-2 {
+	display: inline-block;
+	font-family: 'Times New Roman', TimesNewRoman, Times, Baskerville, Georgia, serif;
+	color: #6f81fd;
+	font-size: 14px;
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.link-2.white {
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+	font-family: 'PT Sans', sans-serif;
+	color: #b7b7c7;
+	font-size: 13px;
+	font-style: normal;
+	text-decoration: none;
+}
+
+.link-2.white:hover {
+	color: #fff;
+}
+
+.made-with-webflow {
+	display: flex;
+	margin-top: 5px;
+
+
+	align-items: center;
+	-webkit-transition: all 400ms ease;
+	transition: all 400ms ease;
+	text-decoration: none;
+}
+
+.made-with-webflow.left-margin {
+	margin-top: 0px;
+	margin-left: 10px;
+	color: #b7b7c7;
+}
+
+.made-with-webflow.left-margin:hover {
+	color: #fff;
+}
+
+.webflow-logo-tiny {
+	width: 18px;
+	margin-right: 4px;
+	opacity: 0.9;
+}
+
+.paragraph-tiny {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.blog-wrapper {
+
+	display: flex;
+
+
+	flex-direction: column;
+
+
+	justify-content: flex-start;
+
+
+	align-items: flex-start;
+	background-color: #fff;
+	text-decoration: none;
+}
+
+.blog-wrapper.with-margin {
+	margin-bottom: 20px;
+}
+
+.blog-image {
+	position: relative;
+	background-color: #5c5c5c;
+}
+
+.meta-number {
+	display: flex;
+	width: 70px;
+	height: 70px;
+
+
+	justify-content: center;
+
+
+	align-items: center;
+	background-image: linear-gradient(45deg, #ff6361, #e47312);
+	color: #fff;
+	font-size: 26px;
+	font-weight: 400;
+}
+
+.meta-month {
+
+	display: flex;
+	width: 70px;
+	height: 40px;
+
+
+	justify-content: center;
+
+
+	align-items: center;
+	background-color: #fff;
+	color: #9d9da5;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+.meta-tag {
+	position: absolute;
+	left: auto;
+	top: 0%;
+	right: 0%;
+	bottom: auto;
+}
+
+.blog-content {
+	width: 100%;
+	padding: 25px 56px 25px 30px;
+	background-color: #e47312;
+	background-image: linear-gradient(158deg, #e47312, #ff6361);
+}
+
+.field-label {
+	margin-bottom: 3px;
+	color: #919197;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.text-field {
+	height: 44px;
+	margin-bottom: 20px;
+	padding-left: 0px;
+	border-style: none none solid;
+	border-width: 2px 2px 1px;
+	border-color: #c1c3cc #c1c3cc #e4e7f1;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+.text-field:hover {
+	border-bottom-color: #e47312;
+}
+
+.text-field:focus {
+	border-bottom-color: #e47312;
+}
+
+.text-field::-webkit-input-placeholder {
+	color: #919197;
+}
+
+.text-field:-ms-input-placeholder {
+	color: #919197;
+}
+
+.text-field::-ms-input-placeholder {
+	color: #919197;
+}
+
+.text-field::placeholder {
+	color: #919197;
+}
+
+.text-field._2:hover {
+	border-bottom-color: #fc493e;
+}
+
+.text-field.area {
+	padding-bottom: 59px;
+}
+
+.button {
+	display: inline-block;
+	min-width: 160px;
+	padding: 15px 25px;
+
+
+	justify-content: center;
+	border-radius: 30px;
+	background-color: #fc493e;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+	color: #fff;
+	font-weight: 500;
+	text-align: center;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: #fd6960;
+}
+
+.button.full {
+	display: block;
+	width: 100%;
+	border-radius: 0px;
+	background-color: #e47312;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.button.full:hover {
+	background-color: #e98a38;
+}
+
+.button.full.not-full {
+	width: auto;
+	font-size: 12px;
+}
+
+.error-message {
+	color: #fc493e;
+	font-weight: 500;
+	text-align: center;
+}
+
+.algin-center {
+	position: relative;
+	text-align: center;
+}
+
+.success-message {
+	background-color: #5cbe7c;
+	color: #fff;
+	font-weight: 500;
+}
+
+
+@media screen and (max-width:991px) {
+	.w-container {
+		max-width: 728px
+	}
+
+	.w-hidden-main {
+		display: inherit !important
+	}
+
+	.w-hidden-medium {
+		display: none !important
+	}
+
+	.w-col-medium-1 {
+		width: 8.33333333%
+	}
+
+	.w-col-medium-2 {
+		width: 16.66666667%
+	}
+
+	.w-col-medium-3 {
+		width: 25%
+	}
+
+	.w-col-medium-4 {
+		width: 33.33333333%
+	}
+
+	.w-col-medium-5 {
+		width: 41.66666667%
+	}
+
+	.w-col-medium-6 {
+		width: 50%
+	}
+
+	.w-col-medium-7 {
+		width: 58.33333333%
+	}
+
+	.w-col-medium-8 {
+		width: 66.66666667%
+	}
+
+	.w-col-medium-9 {
+		width: 75%
+	}
+
+	.w-col-medium-10 {
+		width: 83.33333333%
+	}
+
+	.w-col-medium-11 {
+		width: 91.66666667%
+	}
+
+	.w-col-medium-12 {
+		width: 100%
+	}
+
+	.w-col-stack {
+		width: 100%;
+		left: auto;
+		right: auto
+	}
+
+	.nav-menu a.nav-link,
+	.nav-menu .dr_op_down_item,
+	.features_web_wrapper {
+		display: none;
+	}
+
+	.row-flex {
+		display: block;
+	}
+
+	.width-col-4 {
+		width: 100%;
+		margin-top: 4%;
+	}
+
+	.width-col-3 {
+		width: 50%;
+	}
+}
+
+
+@media screen and (max-width:767px) {
+	.w-hidden-main {
+		display: inherit !important
+	}
+
+	.w-hidden-medium {
+		display: inherit !important
+	}
+
+	.w-hidden-small {
+		display: none !important
+	}
+
+	.w-row,
+	.w-container .w-row {
+		margin-left: 0;
+		margin-right: 0
+	}
+
+	.w-col {
+		width: 100%;
+		left: auto;
+		right: auto
+	}
+
+	.w-col-small-1 {
+		width: 8.33333333%
+	}
+
+	.w-col-small-2 {
+		width: 16.66666667%
+	}
+
+	.w-col-small-3 {
+		width: 25%
+	}
+
+	.w-col-small-4 {
+		width: 33.33333333%
+	}
+
+	.w-col-small-5 {
+		width: 41.66666667%
+	}
+
+	.w-col-small-6 {
+		width: 50%
+	}
+
+	.w-col-small-7 {
+		width: 58.33333333%
+	}
+
+	.w-col-small-8 {
+		width: 66.66666667%
+	}
+
+	.w-col-small-9 {
+		width: 75%
+	}
+
+	.w-col-small-10 {
+		width: 83.33333333%
+	}
+
+	.w-col-small-11 {
+		width: 91.66666667%
+	}
+
+	.w-col-small-12 {
+		width: 100%
+	}
+
+	.logo {
+		padding-left: 10px
+	}
+}
+
+@media screen and (max-width:479px) {
+	.w-container {
+		max-width: none
+	}
+
+	.w-hidden-main {
+		display: inherit !important
+	}
+
+	.w-hidden-medium {
+		display: inherit !important
+	}
+
+	.w-hidden-small {
+		display: inherit !important
+	}
+
+	.w-hidden-tiny {
+		display: none !important
+	}
+
+	.w-col {
+		width: 100%
+	}
+
+	.w-col-tiny-1 {
+		width: 8.33333333%
+	}
+
+	.w-col-tiny-2 {
+		width: 16.66666667%
+	}
+
+	.w-col-tiny-3 {
+		width: 25%
+	}
+
+	.w-col-tiny-4 {
+		width: 33.33333333%
+	}
+
+	.w-col-tiny-5 {
+		width: 41.66666667%
+	}
+
+	.w-col-tiny-6 {
+		width: 50%
+	}
+
+	.w-col-tiny-7 {
+		width: 58.33333333%
+	}
+
+	.w-col-tiny-8 {
+		width: 66.66666667%
+	}
+
+	.w-col-tiny-9 {
+		width: 75%
+	}
+
+	.w-col-tiny-10 {
+		width: 83.33333333%
+	}
+
+	.w-col-tiny-11 {
+		width: 91.66666667%
+	}
+
+	.w-col-tiny-12 {
+		width: 100%
+	}
+
+	.width-col-3 {
+		width: 100%;
+	}
+}
+  </style>
+</head>
+
+<body>
+  <div class="Assignment_4">
+    <div class="over_flow_hidden">
+      <div class="banner">
+        <div class="navigation_bar w-nav">
+          <a href="#" class="brand logo menu_current">
+            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-white.png" width="90" alt="">
+          </a>
+          <nav class="nav-menu nav_menu">
+            <a href="#" class="nav-link w-inline-block menu_current">
+              <div class="navtext">home</div>
+            </a>
+            <a href="#" class="nav-link w-inline-block">
+              <div class="navtext">Projects</div>
+            </a>
+            <a href="#" class="nav-link w-inline-block">
+              <div class="navtext">about</div>
+            </a>
+            <a href="#" class="nav-link w-inline-block">
+              <div class="navtext">Services</div>
+            </a>
+            <a href="#" class="nav-link w-inline-block">
+              <div class="navtext">blog</div>
+            </a>
+            <div class="dropdown dr_op_down_item" id="dropdown-item">
+              <div class="nav-link drop dr_op_down_toggle">
+                <div class="icon width-icon-dropdown-toggle"></div>
+                <div class="navtext">Pages</div>
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/sort-down.svg" alt="" class="arrow_image_down">
+              </div>
+
+            </div>
+            <div class="info-wrapper free-quote">
+              <div class="text-block">Get Free Quote</div>
+            </div>
+          </nav>
+        </div>
+        <div class="features_web_wrapper">
+          <div class="infos-flex">
+            <div class="in_fo_child">
+              <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/phone.svg" alt="" class="info_image">
+              <h1 class="phone-text">Phone Number<br></h1>
+              <p class="paragraph-white">1-800-506-266<br></p>
+              <p class="paragraph-white">1-100-777-800<br></p>
+            </div>
+            <div class="in_fo_child">
+              <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/mail.svg" alt="" class="info_image">
+              <h1 class="phone-text">Contact<br></h1>
+              <p class="paragraph-white">contact@nuuk.com<br></p>
+              <p class="paragraph-white">info@nuuk.com<br></p>
+            </div>
+            <div class="in_fo_child">
+              <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/clock.svg" alt="" class="info_image">
+              <h1 class="phone-text">Opening Times<br></h1>
+              <p class="paragraph-white">
+                Mon - Sat 8:00 - 17:30, Sunday - Closed<br>
+              </p>
+              <a href="#" class="navlink for-button blue white w-inline-block">
+                <div>Find on map</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="social-vertical w-clearfix">
+          <a href="#" class="social-icon lower-mobile w-inline-block">
+            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/facebook-logo.png" width="16" alt="Facebook logo">
+          </a>
+          <a href="#" class="social-icon w-inline-block">
+            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/twitter-logo.png" width="16" alt="Twitter logo">
+          </a>
+          <a href="#" class="social-icon w-inline-block">
+            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/linkedin-logo.png" width="16" alt="Linkedin logo">
+          </a>
+          <a href="#" class="social-icon no-bottom w-inline-block">
+            <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/instagram-logo.png" width="16" alt="Instagram logo">
+          </a>
+        </div>
+        <div class="container in-banner w-container">
+          <div class="w-row">
+            <div class="w-col width-col-7 w-col-stack">
+              <div>
+                <h1 class="top-title on-banner">
+                  YOU DREAM. WE CREATE.<strong><br></strong>
+                </h1>
+                <p class="paragraph-white bigger normal">
+                  We turn your ideas to reality, we don't stop until
+                  you're satisfied.<br>
+                </p>
+                <div class="top-margin half flex">
+                  <a href="#" class="button full not-full w-button free-quote">Get free quote</a>
+                </div>
+              </div>
+            </div>
+            <div class="column w-col width-col-5w-col-stack"></div>
+          </div>
+        </div>
+      </div>
+      <div class="section add-5-percent">
+        <div class="container w-container">
+          <div class="top-title-wrapper">
+            <h1 class="top-title">
+              OUR SPECIALIZATION<strong><br></strong>
+            </h1>
+            <h1 class="top-title absolute">Services</h1>
+            <a href="#" class="navlink for-button blue _0 w-inline-block aside-navlink">
+              <div>view all services</div>
+            </a>
+          </div>
+          <div>
+            <div class="w-dyn-list">
+              <div class="w-dyn-items w-row">
+                <div class="w-dyn-item w-col width-col-3">
+                  <div class="service-content">
+                    <img width="60" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/brickwall.svg" alt=""
+                      class="features-icon">
+                    <h1 class="service-title">Renovation</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique.
+                    </p>
+                    <a href="#" class="navlink for-button blue w-inline-block">
+                      <div>Learn More</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="w-dyn-item w-col  width-col-3">
+                  <div class="service-content">
+                    <img width="60" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/set-square.svg" alt=""
+                      class="features-icon">
+                    <h1 class="service-title">Architecture</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique.
+                    </p>
+                    <a href="#" class="navlink for-button blue w-inline-block">
+                      <div>Learn More</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="w-dyn-item w-col  width-col-3">
+                  <div class="service-content">
+                    <img width="60" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/toolbox.svg" alt=""
+                      class="features-icon">
+                    <h1 class="service-title">Construction</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique.
+                    </p>
+                    <a href="#" class="navlink for-button blue w-inline-block">
+                      <div>Learn More</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="w-dyn-item w-col  width-col-3">
+                  <div class="service-content">
+                    <img width="60" src="https://nuuk-e3eaa.firebaseapp.com/assets/img/paint-roller.svg" alt=""
+                      class="features-icon">
+                    <h1 class="service-title">Financial Results</h1>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Suspendisse varius enim in eros elementum tristique.
+                    </p>
+                    <a href="#" class="navlink for-button blue w-inline-block">
+                      <div>Learn More</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="margin-page">
+            <div class="row-flex verical w-row">
+              <div class="w-col width-col-6 w-col-stack">
+                <div>
+                  <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/serv-1.jpg" width="750" class="shape-image">
+                </div>
+              </div>
+              <div class="w-col width-col-6 w-col-stack">
+                <div class="padding-right">
+                  <div class="top-title-wrapper">
+                    <h1 class="top-title">
+                      who we are<strong><br></strong>
+                    </h1>
+                    <h1 class="top-title absolute">About</h1>
+                  </div>
+                  <div>
+                    <p>
+                      Based on collective work and shared knowledge, Nuuk aims
+                      to favor dialogue and debate, to transform individual
+                      knowledge into increased creative potential.<br><br>Our
+                      studio is a architecture practice based in NY and Paris.
+                      Today, it includes 150 architects, urban planners,
+                      landscape and interior designers of 25 different
+                      nationalities. The company principle of
+                      Architecture-Studio is the collective conception. From
+                      the very beginning, the practice has believed in the
+                      virtues of exchange, crossing ideas, common effort,
+                      shred knowledge.
+                      <a ref="#"><strong><br></strong>
+                      </a>
+                    </p>
+                  </div>
+                  <div class="top-margin half">
+                    <a href="#" class="navlink for-button blue w-inline-block">
+                      <div>meet the team</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="margin-page _10-percent">
+            <div class="w-row">
+              <div class="w-col  width-col-3">
+                <div class="fun-facts">
+                  <div class="fun-text">170</div>
+                  <p>Employer with over 10 years of experience</p>
+                </div>
+              </div>
+              <div class="w-col  width-col-3">
+                <div class="fun-facts">
+                  <div class="fun-text">10</div>
+                  <p>Years experience in construction industries</p>
+                </div>
+              </div>
+              <div class="w-col  width-col-3">
+                <div class="fun-facts">
+                  <div class="fun-text">690</div>
+                  <p>Residential premises completed in 2019</p>
+                </div>
+              </div>
+              <div class="w-col  width-col-3">
+                <div class="fun-facts">
+                  <div class="fun-text">7.1</div>
+                  <p>Milion dollar value on investments</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section gray small">
+      <div class="container w-container">
+        <div class="top-title-wrapper add-20-right">
+          <h1 class="top-title">
+            Our work<strong><br></strong>
+          </h1>
+          <h1 class="top-title absolute _75-percent">Projects</h1>
+          <a href="#" class="navlink for-button blue _0 w-inline-block aside-navlink">
+            <div>view all works</div>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="w-dyn-list">
+          <div class="w-dyn-items w-row">
+            <div class="collection-item w-clearfix w-dyn-item w-col width-col-4">
+              <a href="#" class="project-wrapper w-inline-block">
+                <div class="project-content">
+                  <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-1.jpg" alt="">
+                  <div class="project-overlay">
+                    <div class="project-circle">
+                      <div>View Project</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="collection-item w-clearfix w-dyn-item w-col width-col-4">
+              <a href="#" class="project-wrapper w-inline-block">
+                <div class="project-content">
+                  <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-4.jpg" alt="">
+                  <div class="project-overlay">
+                    <div class="project-circle">
+                      <div>View Project</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="collection-item w-clearfix w-dyn-item w-col width-col-4">
+              <a href="#" class="project-wrapper w-inline-block">
+                <div class="project-content">
+                  <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-3.jpg" alt="">
+                  <div class="project-overlay">
+                    <div class="project-circle">
+                      <div>View Project</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="collection-item w-clearfix w-dyn-item w-col width-col-4">
+              <a href="#" class="project-wrapper w-inline-block">
+                <div class="project-content">
+                  <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-6.jpg" alt="">
+                  <div class="project-overlay">
+                    <div class="project-circle">
+                      <div>View Project</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="collection-item w-clearfix w-dyn-item w-col width-col-4">
+              <a href="#" class="project-wrapper w-inline-block">
+                <div class="project-content">
+                  <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-5.jpg" alt="">
+                  <div class="project-overlay">
+                    <div class="project-circle">
+                      <div>View Project</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="collection-item w-clearfix w-dyn-item w-col width-col-4">
+              <a href="#" class="project-wrapper w-inline-block">
+                <div class="project-content">
+                  <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/p-2.jpg" alt="">
+                  <div class="project-overlay">
+                    <div class="project-circle">
+                      <div>View Project</div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section color">
+      <div class="container w-container">
+        <div>
+          <div class="top-title-wrapper center vertical">
+            <h1 class="top-title white">
+              LET'S MAKE SOMETHING GREAT TOGETHER<strong><br></strong>
+            </h1>
+            <p class="paragraph-white bigger">
+              Get in touch with us and send some basic info for a quick
+              quote.<br>
+            </p>
+            <div class="top-margin half">
+              <a href="#" class="navlink for-button blue white w-inline-block free-quote">
+                <div>Get free quote</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section gray">
+      <div class="container w-container">
+        <div>
+          <div class="top-title-wrapper">
+            <h1 class="top-title">
+              PROFESSIONALS<strong><br></strong>
+            </h1>
+            <h1 class="top-title absolute _75-percent">Team</h1>
+            <a href="#" class="navlink for-button blue _0 w-inline-block aside-navlink">
+              <div>About us</div>
+            </a>
+          </div>
+          <div>
+            <div class="w-row">
+              <div class="w-col  width-col-3">
+                <div class="team-wrapper">
+                  <div class="team-photo"></div>
+                  <div class="team-content">
+                    <h1 class="service-title team">Philip Brower<br></h1>
+                    <p class="job-title">Managing Director<br></p>
+                  </div>
+                  <div class="social-vertical horizontal w-clearfix">
+                    <a href="#" class="social-icon w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/facebook-logo.png" width="16" alt="">
+                    </a>
+                    <a href="#" class="social-icon w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/twitter-logo.png" width="16" alt="">
+                    </a>
+                    <a href="#" class="social-icon no-bottom w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/linkedin-logo.png" width="16" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-col  width-col-3">
+                <div class="team-wrapper">
+                  <div class="team-photo _2"></div>
+                  <div class="team-content">
+                    <h1 class="service-title team">John Wick<br></h1>
+                    <p class="job-title">Managing Director<br></p>
+                  </div>
+                  <div class="social-vertical horizontal w-clearfix">
+                    <a href="#" class="social-icon w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/facebook-logo.png" width="16" alt="">
+                    </a>
+                    <a href="#" class="social-icon w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/twitter-logo.png" width="16" alt="">
+                    </a>
+                    <a href="#" class="social-icon no-bottom w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/linkedin-logo.png" width="16" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-col  width-col-3">
+                <div class="team-wrapper">
+                  <div class="team-photo _3"></div>
+                  <div class="team-content">
+                    <h1 class="service-title team">Jimmy McGill<br></h1>
+                    <p class="job-title">Managing Director<br></p>
+                  </div>
+                  <div class="social-vertical horizontal w-clearfix">
+                    <a href="#" class="social-icon w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/facebook-logo.png" width="16" alt="">
+                    </a>
+                    <a href="#" class="social-icon w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/twitter-logo.png" width="16" alt="">
+                    </a>
+                    <a href="#" class="social-icon no-bottom w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/linkedin-logo.png" width="16" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-col  width-col-3">
+                <div class="team-wrapper">
+                  <div class="team-photo _4"></div>
+                  <div class="team-content">
+                    <h1 class="service-title team">Sara Connor<br></h1>
+                    <p class="job-title">Managing Director<br></p>
+                  </div>
+                  <div class="social-vertical horizontal w-clearfix">
+                    <a href="#" class="social-icon w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/facebook-logo.png" width="16" alt="">
+                    </a>
+                    <a href="#" class="social-icon w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/twitter-logo.png" width="16" alt="">
+                    </a>
+                    <a href="#" class="social-icon no-bottom w-inline-block">
+                      <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/linkedin-logo.png" width="16" alt="">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="margin-page">
+            <div class="margin-page">
+              <div class="row-flex verical w-row">
+                <div class="w-col width-col-5w-col-stack">
+                  <div>
+                    <div class="padding-right left">
+                      <div class="top-title-wrapper">
+                        <h1 class="top-title">
+                          Testimonials<strong><br></strong>
+                        </h1>
+                        <h1 class="top-title absolute _75-percent">
+                          clients
+                        </h1>
+                      </div>
+                      <div>
+                        <p>
+                          Aenean ut eros et nisl sagittis vestibulum. Fusce
+                          neque. Praesent blandit laoreet nibh. Morbi mollis
+                          tellus ac sapien.<a href="#"><strong><br></strong></a>
+                        </p>
+                      </div>
+                      <div class="top-margin half">
+                        <a href="#" class="navlink for-button blue w-inline-block">
+                          <div>our services</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-col width-col-7 w-col-stack">
+                  <div class="margin-device">
+                    <div class="w-row">
+                      <div class="w-col width-col-6">
+                        <div class="testimonials-wrapper add-only-0">
+                          <div class="testimonials-photo">
+                            <div class="text-block-2">"</div>
+                          </div>
+                          <h4 class="testi-title">Sara William</h4>
+                          <div class="job-title">CEO at Webflow</div>
+                          <p class="testimonial-paragraph">
+                            "Duis cursus, mi quis viverra ornare, eros
+                            dolor interdum nulla, ut commodo diam libero vitae
+                            erat. Aenean faucibus nibh et justo cursus id
+                            rutrum lorem imperdiet"
+                          </p>
+                        </div>
+                        <div class="testimonials-wrapper no-margin">
+                          <div class="testimonials-photo">
+                            <div class="text-block-2">"</div>
+                          </div>
+                          <h4 class="testi-title">John Junior</h4>
+                          <div class="job-title">Menager at Complexx</div>
+                          <p class="testimonial-paragraph">
+                            "Donec orci lectus, aliquam ut, faucibus non,
+                            euismod id, nulla. Cras varius. Etiam sit amet
+                            orci eget eros faucibus tincidunt. Fusce a
+                            quam"
+                          </p>
+                        </div>
+                      </div>
+                      <div class="w-col width-col-6">
+                        <div class="testimonials-wrapper move-down">
+                          <div class="testimonials-photo">
+                            <div class="text-block-2">"</div>
+                          </div>
+                          <h4 class="testi-title">Raven Durgan</h4>
+                          <div class="job-title">Architect at Group</div>
+                          <p class="testimonial-paragraph">
+                            "Aliquam eu nunc. Cras dapibus. Vestibulum
+                            turpis sem, aliquet eget, lobortis pellentesque,
+                            rutrum eu, nisl"
+                          </p>
+                        </div>
+                        <div class="testimonials-wrapper no-margin">
+                          <div class="testimonials-photo">
+                            <div class="text-block-2">"</div>
+                          </div>
+                          <h4 class="testi-title">Sami Typo</h4>
+                          <div class="job-title">SEO at Balfin</div>
+                          <p class="testimonial-paragraph">
+                            "Vestibulum fringilla pede sit amet augue.
+                            Morbi ac felis. Ut a nisl id ante tempus
+                            hendrerit"
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container w-container">
+        <div class="top-title-wrapper">
+          <h1 class="top-title">
+            lastet news<strong><br></strong>
+          </h1>
+          <h1 class="top-title absolute">blog</h1>
+          <a href="#" class="navlink for-button blue _0 w-inline-block aside-navlink">
+            <div>view blog</div>
+          </a>
+        </div>
+        <div>
+          <div class="w-dyn-list">
+            <div class="w-dyn-items w-row">
+              <div class="w-dyn-item w-col width-col-4">
+                <a href="#" class="blog-wrapper w-inline-block">
+                  <div class="blog-image">
+                    <div class="meta-tag">
+                      <div class="meta-number">
+                        <div>17</div>
+                      </div>
+                      <div class="meta-month">
+                        <div>Oct</div>
+                      </div>
+                    </div>
+                    <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/port-1.jpg" alt="">
+                  </div>
+                  <div class="blog-content">
+                    <h1 class="top-title smaller-white blog">Blogpost 1</h1>
+                    <p class="paragraph-white">
+                      Service and providing potential clients and customers
+                      with testimonials is one of the best ways to market.
+                    </p>
+                    <div class="navlink for-button blue white not-link">
+                      <div>read more</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="w-dyn-item w-col width-col-4">
+                <a href="#" class="blog-wrapper w-inline-block">
+                  <div class="blog-image">
+                    <div class="meta-tag">
+                      <div class="meta-number">
+                        <div>11</div>
+                      </div>
+                      <div class="meta-month">
+                        <div>Dec</div>
+                      </div>
+                    </div>
+                    <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/port-2.jpg" alt="">
+                  </div>
+                  <div class="blog-content">
+                    <h1 class="top-title smaller-white blog">Blogpost 2</h1>
+                    <p class="paragraph-white">
+                      Service and providing potential clients and customers
+                      with testimonials is one of the best ways to market.
+                    </p>
+                    <div class="navlink for-button blue white not-link">
+                      <div>read more</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="w-dyn-item w-col width-col-4">
+                <a href="#" class="blog-wrapper w-inline-block">
+                  <div class="blog-image">
+                    <div class="meta-tag">
+                      <div class="meta-number">
+                        <div>27</div>
+                      </div>
+                      <div class="meta-month">
+                        <div>Oct</div>
+                      </div>
+                    </div>
+                    <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/port-3.jpg" alt="">
+                  </div>
+                  <div class="blog-content">
+                    <h1 class="top-title smaller-white blog">Blogpost 3</h1>
+                    <p class="paragraph-white">
+                      Service and providing potential clients and customers
+                      with testimonials is one of the best ways to market.
+                    </p>
+                    <div class="navlink for-button blue white not-link">
+                      <div>read more</div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section logo">
+      <div class="algin-center">
+        <h1 class="top-title smaller-white no-width">
+          trusted by top companies<strong><br></strong>
+        </h1>
+      </div>
+      <div class="logo-flex">
+        <a href="#" class="tab-logo logo-5 w-inline-block"></a>
+        <a href="#" class="tab-logo logo-2 w-inline-block"></a>
+        <a href="#" class="tab-logo logo-3 w-inline-block"></a>
+        <a href="#" class="tab-logo logo-4 w-inline-block"></a>
+        <a href="#" class="tab-logo w-inline-block"></a>
+        <h1 class="top-title smaller-white none-mobile">
+          trusted by top companies<strong><br></strong>
+        </h1>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container w-container">
+        <div class="w-row">
+          <div class="w-col width-col-4">
+            <div class="footer-column">
+              <div class="with-line">
+                <h1 class="top-title smaller-white in-footer">
+                  About Nuuk<strong><br></strong>
+                </h1>
+                <div class="line"></div>
+              </div>
+              <p class="paragraph-white _100">
+                Based on collective work and shared knowledge, Nuuk aims to
+                favor dialogue and debate, to transform individual knowledge
+                into increased creative potential.<a href="#"><strong><br></strong></a>
+              </p>
+              <a href="#" class="navlink for-button blue white w-inline-block">
+                <div>find on map</div>
+              </a>
+            </div>
+          </div>
+          <div class="w-col width-col-4">
+            <div>
+              <div class="footer-column">
+                <div class="with-line">
+                  <h1 class="top-title smaller-white in-footer">
+                    Services<strong><br></strong>
+                  </h1>
+                  <div class="line"></div>
+                </div>
+                <div>
+                  <div class="w-dyn-list">
+                    <div class="w-dyn-items">
+                      <div class="w-dyn-item">
+                        <a href="#" class="navlink for-button blue white for-footer w-inline-block">
+                          <div>Financial Results</div>
+                        </a>
+                      </div>
+                      <div class="w-dyn-item">
+                        <a href="#" class="navlink for-button blue white for-footer w-inline-block">
+                          <div>Construction</div>
+                        </a>
+                      </div>
+                      <div class="w-dyn-item">
+                        <a href="#" class="navlink for-button blue white for-footer w-inline-block">
+                          <div>Architecture</div>
+                        </a>
+                      </div>
+                      <div class="w-dyn-item">
+                        <a href="#" class="navlink for-button blue white for-footer w-inline-block">
+                          <div>Renovation</div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-col width-col-4">
+            <div>
+              <div class="footer-column">
+                <div class="with-line">
+                  <h1 class="top-title smaller-white in-footer">
+                    contact us<strong><br></strong>
+                  </h1>
+                  <div class="line"></div>
+                </div>
+                <div>
+                  <div class="in_fo_child horizontal no-center">
+                    <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/phone.svg" alt="" class="info_image left">
+                    <div>
+                      <h1 class="phone-text">Phone Number<br></h1>
+                      <p class="paragraph-white">1-800-506-266<br></p>
+                    </div>
+                  </div>
+                  <div class="in_fo_child horizontal no-center">
+                    <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/clock.svg" alt="" class="info_image left">
+                    <div>
+                      <h1 class="phone-text">Opening Times<br></h1>
+                      <p class="paragraph-white">
+                        Mon - Sat 8:00 - 17:30, Sunday - Closed<br>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="in_fo_child horizontal no-center">
+                    <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/mail.svg" alt="" class="info_image left">
+                    <div>
+                      <h1 class="phone-text">Contact<br></h1>
+                      <p class="paragraph-white">contact@nuuk.com<br></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copy_right_section">
+          <div class="row-flex verical reverse w-row">
+            <div class="w-col width-col-6 w-col-stack">
+              <a href="#" class="brand normal logo menu_current">
+                <img src="https://nuuk-e3eaa.firebaseapp.com/assets/img/logo-white.png" width="90" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>
